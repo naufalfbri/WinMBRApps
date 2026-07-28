@@ -41,7 +41,6 @@
             webView21.Location = new Point(0, 0);
             webView21.Name = "webView21";
             webView21.Size = new Size(1344, 681);
-            webView21.Source = new Uri("", UriKind.Absolute);
             webView21.TabIndex = 0;
             webView21.ZoomFactor = 1D;
             webView21.Click += webView21_Click;
