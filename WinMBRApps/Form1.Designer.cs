@@ -1,6 +1,6 @@
 ﻿namespace WinMBRApps
 {
-    partial class Form1
+    partial class WINAPPS
     {
         /// <summary>
         ///  Required designer variable.
@@ -41,18 +41,20 @@
             webView21.Location = new Point(0, 0);
             webView21.Name = "webView21";
             webView21.Size = new Size(1344, 681);
-            webView21.Source = new Uri("https://youtube.com", UriKind.Absolute);
+            webView21.Source = new Uri("", UriKind.Absolute);
             webView21.TabIndex = 0;
             webView21.ZoomFactor = 1D;
+            webView21.Click += webView21_Click;
             // 
-            // Form1
+            // WINAPPS
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1344, 681);
             Controls.Add(webView21);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "WINAPPS";
+            Text = "WIN MBR APPS";
+            Load += WINAPPS_LoadAsync;
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
             ResumeLayout(false);
         }

@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace WinMBRApps
 {
-    public partial class Form1 : Form
+    public partial class WINAPPS : Form
     {
-        public Form1()
+        public WINAPPS()
         {
             InitializeComponent();
             InitializeWebView();
@@ -16,14 +16,14 @@ namespace WinMBRApps
 
         private async void InitializeWebView()
         {
-            
+
             await webView21.EnsureCoreWebView2Async(null);
 
-            
+
             webView21.CoreWebView2.AddWebResourceRequestedFilter("*", CoreWebView2WebResourceContext.All);
             webView21.CoreWebView2.WebResourceRequested += CoreWebView2_WebResourceRequested;
 
-            
+
             webView21.CoreWebView2.Navigate("https://app.local/index.html");
         }
 
@@ -46,6 +46,19 @@ namespace WinMBRApps
                     stream, 200, "OK", $"Content-Type: {mimeType}"
                 );
             }
+        }
+
+        private void webView21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void WINAPPS_LoadAsync(object sender, EventArgs e)
+        {
+            await webView21.EnsureCoreWebView2Async(null);
+            webView21.CoreWebView2.Settings.AreDevToolsEnabled = false;
+            webView21.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
+            webView21.CoreWebView2.Settings.AreBrowserAcceleratorKeysEnabled = false;
         }
     }
 }
